@@ -1,0 +1,198 @@
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #9b9b9b;
+  --color-tertiary: #c0c0c0;
+  --color-quaternary: #dddddd;
+  --color-quinary: #8a8a8a;
+}
+
+body {
+  background-color: #1f5899;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.container span {
+  margin: 0;
+  padding: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
+}
+
+
+#logo span, #nard span, #subscript span {
+  display: inline-block;
+}
+
+#logo {
+  transition: transform 0.9s ease, opacity 0.9s ease;
+  font-size: 45px;
+  letter-spacing: 8px;
+  font-weight: bold;
+  font-family: "Lusitana", serif;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+#nard {
+  font-family: "Lusitana", serif;
+  letter-spacing: 8px;
+  font-size: 45px;
+  font-weight: bold;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+#subscript {
+  font-family: "Lusitana", serif;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  align-self: center;
+  margin-top: 19px;
+  margin-left: -1px;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.glitch {
+  animation: glitch-effect 1s infinite;
+}
+
+@keyframes glitch-effect {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-5px, 5px);
+  }
+  40% {
+    transform: translate(5px, -5px);
+  }
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.text_shadows {
+  text-shadow:
+    3px 3px 0 var(--color-secondary),
+    6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary),
+    12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 20px;
+  color: var(--color-primary);
+
+  animation: shadows 6s cubic-bezier(0.4, 0, 0.2, 1) infinite,
+             move 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  letter-spacing: 0.4rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary),
+      9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary),
+      9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary),
+      9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary),
+      9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary),
+      9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-1px, -1px);
+  }
+  40% {
+    transform: translate(1px, 1px);
+  }
+  60% {
+    transform: translate(-0.75px, 0.75px);
+  }
+  80% {
+    transform: translate(0.5px, -0.5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+/* NEW CSS ADD */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
